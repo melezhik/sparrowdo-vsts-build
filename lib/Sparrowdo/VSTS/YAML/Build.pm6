@@ -1,6 +1,6 @@
 use v6;
 
-unit module Sparrowdo::VSTS::YAML::Build;
+unit module Sparrowdo::VSTS::YAML::Build:ver<0.0.1>;
 
 use Sparrowdo;
 use Sparrowdo::Core::DSL::Template;
