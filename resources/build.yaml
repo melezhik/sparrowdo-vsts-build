@@ -1,0 +1,13 @@
+resources:
+
+- repo: self
+
+queue:
+  name: [% queue %]
+  timeoutInMinutes: [% timeout %]
+  demands:
+  - Agent.name -equals [% agent_name %]
+
+
+steps:
+
