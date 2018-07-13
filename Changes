@@ -1,5 +1,7 @@
 {{$NEXT}}
 
+    - agent name is no longer has default value
+
 0.0.2  2018-06-13T15:43:35Z
 
     - Recover readme
