@@ -8,7 +8,8 @@ Sparrowdo module to generate VSTS yaml build definition header.
     module_run "VSTS::YAML::Build", %(
       build-dir => "cicd/build",
       agent-name => "James Bond", # default value is not set
-      queue => "build-lane"
+      queue => "build-lane",
+      timeout => 10, # build timeout 10 minutes, this is default value
     );
 
 
