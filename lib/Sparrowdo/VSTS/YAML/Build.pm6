@@ -21,11 +21,15 @@ our sub tasks (%args) {
   directory "$build-dir/.cache";
   directory "$build-dir/files";
 
+  my @demands = %args<demands> || [];
+
+  @demands.push: "Agent.name -equals {%args<agent-name>}" if %args<agent-name>;
+
   template-create "$build-dir/build.yaml", %(
     source => ( slurp %?RESOURCES<build.yaml> ),
     variables => %( 
       queue => $queue,
-      agent_name => $agent-name,
+      demands => @demands,
       timeout => $timeout
     )
   );

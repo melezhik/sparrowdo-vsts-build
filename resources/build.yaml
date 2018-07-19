@@ -5,9 +5,9 @@ resources:
 queue:
   name: [% queue %]
   timeoutInMinutes: [% timeout %]
-  [%- IF agent_name %]
   demands:
-  - Agent.name -equals [% agent_name %]
+  [%- FOREACH d IN demands %]
+   - [% d %]
   [%- END %]
 
 steps:
