@@ -1,6 +1,6 @@
 use v6;
 
-unit module Sparrowdo::VSTS::YAML::Build:ver<0.0.5>;
+unit module Sparrowdo::VSTS::YAML::Build:ver<0.0.6>;
 
 use Sparrowdo;
 use Sparrowdo::Core::DSL::Template;
@@ -11,7 +11,7 @@ our sub tasks (%args) {
 
   my $queue = %args<queue> || 'default';
   my $agent-name = %args<agent-name>;
-  my $timeout = %args<timeout> || 10; # 10 minutes
+  my $timeout = %args<timeout> || 20; # 20 minutes
 
   my $build-dir = %args<build-dir> || die "usage module_run '{ ::?MODULE.^name }' ,%(build-dir => dir)";
 
