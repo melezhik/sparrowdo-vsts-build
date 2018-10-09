@@ -5,9 +5,11 @@ resources:
 queue:
   name: [% queue %]
   timeoutInMinutes: [% timeout %]
+  [%- IF demands.size() > 0 %]
   demands:
   [%- FOREACH d IN demands %]
    - [% d %]
+  [%- END %]
   [%- END %]
 
 steps:
